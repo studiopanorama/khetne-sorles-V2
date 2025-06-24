@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: Inter, system-ui, sans-serif;
+  line-height: 1.2;
+  color: #000;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  height: 60vh;
+  max-height: 60vh;
+  background: url('/hero.webp') center/cover no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.highlight {
+  background: #ff53f6;
+  display: inline;
+  padding: 0.1em 0.15em;               /* deutlich mehr oben/unten */
+  margin: -0.1em -0.2em;               /* optisch überstehend */
+  line-height: 1.2;                    /* enger Zeilenabstand */
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  border-radius: 0.1em;
+}
+
+.logo {
+  width:60vw;
+  max-width: 1200px;
+  min-width: 400px;
+  height: auto;
+}
+
+/* Info Sektionen */
+.content-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.info {
+  width: 100%;
+}
+
+.column {
+  padding: 1rem;
+}
+
+.column.title {
+  flex: 1 1 300px;
+}
+
+.column.text {
+  flex: 2 1 600px; /* breiter als die Titel-Spalte */
+}
+.about {
+  background: #fff;
+}
+
+.about .title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.about .text {
+  font-size: 1.5rem;
+}
+
+
+
+/* zweite Sektion */
+.what {
+  background: #94a919;
+/*  color: white;*/
+}
+
+.what .title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.what .text.small {
+  font-size: 1rem;
+}
+
+/* Footer */
+.impressum {
+  background: #f0f0f0;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+.footer {
+  background: #f0f0f0;
+  padding: 1.5rem 2rem;
+}
+
+.footer .content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+  font-size: 0.9rem;
+  color: black;
+}
+
+.footer a {
+  color: black;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 80vh;
+    max-height: 80vh;
+  }
+
+    .footer .content-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .footer-right {
+    align-self: flex-start;
+  }
+}
